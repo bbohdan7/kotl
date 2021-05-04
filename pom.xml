@@ -7,7 +7,7 @@
     <groupId>com.zbogdan.app</groupId>
     <artifactId>kotl</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>com.zbogdan.app kotl</name>
 
