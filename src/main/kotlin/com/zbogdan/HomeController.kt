@@ -1,5 +1,6 @@
 package com.zbogdan
 
+import com.zbogdan.models.User
 import com.zbogdan.services.UserService
 import javax.annotation.PostConstruct
 import javax.ejb.Singleton
@@ -15,7 +16,7 @@ open class HomeController {
 
     @PostConstruct
     open fun init(): Unit {
-        println("Printing all of the users")
-        usrService.all().forEach(System.out::println)
+        println("Printing all of the users' accounts")
+        usrService.all().map(User::accounts).forEach(System.out::println)
     }
 }
