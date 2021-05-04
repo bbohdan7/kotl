@@ -3,8 +3,6 @@ package com.zbogdan
 import com.zbogdan.models.User
 import com.zbogdan.services.UserService
 import javax.annotation.PostConstruct
-import javax.ejb.Singleton
-import javax.ejb.Startup
 import javax.ejb.Stateless
 import javax.inject.Inject
 import javax.inject.Named
