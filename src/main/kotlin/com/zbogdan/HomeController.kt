@@ -5,10 +5,12 @@ import com.zbogdan.services.UserService
 import javax.annotation.PostConstruct
 import javax.ejb.Singleton
 import javax.ejb.Startup
+import javax.ejb.Stateless
 import javax.inject.Inject
+import javax.inject.Named
 
-@Startup
-@Singleton
+@Named
+@Stateless
 open class HomeController {
 
     @Inject
@@ -18,5 +20,9 @@ open class HomeController {
     open fun init(): Unit {
         println("Printing all of the users' accounts")
         usrService.all().map(User::accounts).forEach(System.out::println)
+    }
+
+    open fun getUsers(): List<User> {
+        return usrService.all();
     }
 }
