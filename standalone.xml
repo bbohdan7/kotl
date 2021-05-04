@@ -160,7 +160,7 @@
                     </security>
                 </datasource>
                 <datasource jndi-name="java:/PaymentDS" pool-name="PaymentDS" enabled="true">
-                    <connection-url>jdbc:mysql://192.168.0.131:32323/nbu</connection-url>
+                    <connection-url>jdbc:mysql://payment-processor-mysql:3306/nbu</connection-url>
                     <driver>mysql</driver>
                     <security>
                         <user-name>root</user-name>

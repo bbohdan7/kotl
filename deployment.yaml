@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kotlapp
+  namespace: bogdan
+  labels:
+    app: kotlapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kotlapp
+  template:
+    metadata:
+      labels:
+        app: kotlapp
+    spec:
+      containers:
+      - name: kotlapp
+        image: myregistry:31777/kotlapp
+        ports:
+        - containerPort: 8080
+        - containerPort: 9990
+    
